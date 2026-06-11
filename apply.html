@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemaris 応募フォーム</title>
+<style>
+body { font-family: Arial; background:#fdfdfd; margin:0; padding:0; }
+.container { max-width:600px; margin:50px auto; padding:30px; border:1px solid #ddd; border-radius:10px; background:#fff; }
+h1 { text-align:center; margin-bottom:20px; color:#e60033; }
+label { display:block; margin-top:15px; font-weight:bold; }
+input, select, textarea { width:100%; padding:10px; margin-top:5px; border-radius:5px; border:1px solid #ccc; box-sizing:border-box; }
+button { margin-top:20px; padding:12px; width:100%; background:#e60033; color:#fff; font-size:16px; border:none; border-radius:5px; cursor:pointer; }
+button:hover { background:#cc0033; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Gemaris 応募フォーム</h1>
+<form action="submit_form.php" method="POST">
+  <label for="role">応募職種</label>
+  <select id="role" name="role" required>
+    <option value="">選択してください</option>
+    <option value="ライバー">ライバー</option>
+    <option value="ライバー兼マネージャー">ライバー兼マネージャー</option>
+    <option value="スカウト">スカウト</option>
+  </select>
+
+  <label for="name">お名前</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="age">年齢</label>
+  <input type="number" id="age" name="age" min="13" required>
+
+  <label for="email">メールアドレス</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="experience">配信経験・自己PR</label>
+  <textarea id="experience" name="experience" rows="6" placeholder="自己紹介や配信経験、希望理由などを入力してください" required></textarea>
+
+  <button type="submit">応募する</button>
+</form>
+</div>
+</body>
+</html>
+
+<?php
+if($_SERVER["REQUEST_METHOD"]=="POST") {
+    $role = htmlspecialchars($_POST['role']);
+    $name = htmlspecialchars($_POST['name']);
+    $age = htmlspecialchars($_POST['age']);
+    $email = htmlspecialchars($_POST['email']);
+    $experience = htmlspecialchars($_POST['experience']);
+
+    // CSVに保存（応募者データをサーバーに保存）
+    $file = 'applications.csv';
+    $data = [$role, $name, $age, $email, $experience, date("Y-m-d H:i:s")];
+    $fp = fopen($file, 'a');
+    fputcsv($fp, $data);
+    fclose($fp);
+
+    // 管理者へ通知メール
+    $admin_email = "info@wwwgemaris.com"; // ここを管理者メールに変更
+    $subject = "新規応募：$name ($role)";
+    $message = "応募情報\n\n職種: $role\n名前: $name\n年齢: $age\nメール: $email\n自己PR:\n$experience\n";
+    $headers = "From: info@wwwgemaris.com";
+    mail($admin_email, $subject, $message, $headers);
+
+    // 応募者へ自動返信メール
+    $user_subject = "【Gemaris】応募ありがとうございます";
+    $user_message = "$name 様\n\nこの度はGemarisへのご応募ありがとうございます。\n内容を確認のうえ、担当より追ってご連絡いたします。\n\nGemaris運営事務局";
+    $user_headers = "From: info@wwwgemaris.com";
+    mail($email, $user_subject, $user_message, $user_headers);
+
+    // 完了画面
+    echo "<!DOCTYPE html>
+    <html lang='ja'>
+    <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>応募完了</title>
+    <style>
+    body { font-family: Arial; background:#fdfdfd; margin:0; padding:0; }
+    .container { max-width:600px; margin:50px auto; padding:30px; border:1px solid #ddd; border-radius:10px; background:#fff; text-align:center; }
+    h1 { color:#e60033; }
+    </style>
+    </head>
+    <body>
+    <div class='container'>
+    <h1>応募完了</h1>
+    <p>$name 様、応募ありがとうございました。</p>
+    <p>内容を確認のうえ、担当者より追ってご連絡いたします。</p>
+    <a href='index.html'>戻る</a>
+    </div>
+    </body>
+    </html>";
+}
+?>
