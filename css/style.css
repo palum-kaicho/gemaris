@@ -1338,3 +1338,58 @@ form .button{
   width:100%;
   margin-top:20px;
 }
+/* スマホ向けレスポンシブ対応（style.cssの末尾に追加） */
+@media (max-width: 768px) {
+  /* ヘッダーの調整 */
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .header nav a {
+    font-size: 13px;
+  }
+
+  /* コンテンツ全般の余白調整 */
+  .section {
+    padding: 40px 0;
+  }
+  
+  .container {
+    width: 95%;
+  }
+
+  /* キャラクタレイアウト（画像と文字の並び）をスマホでは縦積みにする */
+  .character-layout,
+  .character-layout.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .character-image {
+    margin-bottom: 20px;
+  }
+
+  /* ヒーローエリアの調整 */
+  .hero-inner {
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
+/* 画像が画面からはみ出さないための保険 */
+img {
+  max-width: 100%;
+  height: auto;
+}
