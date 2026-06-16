@@ -1,0 +1,314 @@
+/* =========================================
+  EDITORIAL MAGAZINE STYLE (interview.css)
+========================================= */
+
+:root {
+  --mag-bg: #f8f7f4;          /* 雑誌の紙質をイメージした微かに温かみのある白 */
+  --mag-black: #1a1917;       /* 漆黒ではなくインクのような深いチャコール */
+  --mag-gray: #5a5854;        /* 本文用のやわらかなダークグレー */
+  --mag-accent: #a9182a;      /* 知性を感じるシックなボルドーレッド */
+  --mag-border: rgba(26, 25, 23, 0.08);
+}
+
+body.page-interview {
+  margin: 0;
+  padding: 0;
+  background-color: var(--mag-bg);
+  color: var(--mag-black);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 2.1;
+  letter-spacing: 0.03em;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+  HEADER
+========================= */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid var(--mag-border);
+}
+
+.header-inner {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 32px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--mag-black);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--mag-accent);
+}
+
+nav .apply-btn {
+  border: 1px solid var(--mag-black);
+  padding: 6px 18px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+nav .apply-btn:hover {
+  background-color: var(--mag-black);
+  color: #fff;
+}
+
+/* =========================
+  HERO (カバーグラビア風)
+========================= */
+.interview-hero {
+  padding: 180px 0 100px;
+  text-align: center;
+  border-bottom: 1px solid var(--mag-black);
+  background: radial-gradient(circle at 80% 20%, rgba(169, 24, 42, 0.03) 0%, transparent 50%);
+}
+
+.interview-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--mag-accent);
+  margin-bottom: 20px;
+}
+
+.interview-hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--mag-black);
+  margin: 0 auto 30px;
+  max-width: 800px;
+}
+
+.hero-lead {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--mag-gray);
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--mag-border);
+  display: inline-flex;
+  padding-top: 15px;
+}
+
+.credit .speaker {
+  color: var(--mag-black);
+}
+.credit .date {
+  color: var(--mag-gray);
+}
+
+/* =========================
+  ARTICLE LAYOUT
+========================= */
+.interview-container {
+  max-width: 760px; /* 読書に最適な、縦に美しく流れる道幅 */
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.lead-block {
+  font-size: 1.15rem;
+  color: var(--mag-black);
+  font-weight: 500;
+  border-left: 3px solid var(--mag-accent);
+  padding-left: 24px;
+  margin-bottom: 80px;
+}
+
+.interview-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+/* 質問と回答のブロック */
+.interview-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--mag-black);
+  margin: 0;
+}
+
+/* 「Q.01」の数字を海外マガジン風に強調 */
+.question h2 span {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--mag-accent);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.answer p {
+  font-size: 1.05rem;
+  color: var(--mag-gray);
+  margin: 0 0 20px;
+}
+.answer p:last-child {
+  margin-bottom: 0;
+}
+
+/* マーケティング用のリスト */
+.marketing-points {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  border-top: 1px solid var(--mag-border);
+  border-bottom: 1px solid var(--mag-border);
+}
+
+.marketing-points li {
+  padding: 15px 10px;
+  border-bottom: 1px solid var(--mag-border);
+  font-size: 0.95rem;
+  color: var(--mag-gray);
+}
+.marketing-points li:last-child {
+  border-bottom: none;
+}
+
+.marketing-points li strong {
+  display: inline-block;
+  width: 90px;
+  color: var(--mag-black);
+  font-size: 1rem;
+}
+
+/* =========================
+  PULL QUOTE (名言の抜き出し)
+========================= */
+.pull-quote {
+  margin: 40px 0;
+  padding: 40px 0;
+  border-top: 2px solid var(--mag-black);
+  border-bottom: 2px solid var(--mag-black);
+  text-align: center;
+}
+
+.pull-quote blockquote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 800;
+  color: var(--mag-black);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================
+  CTA (マガジンエンド)
+========================= */
+.interview-cta {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #f1efe9;
+  border-top: 1px solid var(--mag-border);
+}
+
+.interview-cta h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-lead {
+  color: var(--mag-gray);
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+}
+
+.magazine-btn {
+  display: inline-block;
+  background-color: var(--mag-black);
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 45px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.magazine-btn:hover {
+  background-color: var(--mag-accent);
+  transform: translateY(-2px);
+}
+
+/* =========================
+  FOOTER
+========================= */
+.footer {
+  padding: 30px 0;
+  background-color: var(--mag-bg);
+  text-align: center;
+  border-top: 1px solid var(--mag-border);
+}
+
+.footer p {
+  color: var(--mag-gray);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* =========================
+  RESPONSIVE
+========================= */
+.sp-only { display: none; }
+
+@media (max-width: 768px) {
+  .sp-only { display: block; }
+  .interview-hero { padding: 140px 0 60px; }
+  .interview-container { padding: 50px 24px; }
+  .interview-stream { gap: 50px; }
+  .pull-quote { padding: 30px 10px; }
+  nav nav a:not(.apply-btn) { display: none; } /* スマホ時はナビをシンプルに */
+}
