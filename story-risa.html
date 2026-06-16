@@ -1,314 +1,255 @@
-/* =========================================
-  EDITORIAL MAGAZINE STYLE (interview.css)
-========================================= */
+<!DOCTYPE html>
+<html lang="ja">
 
-:root {
-  --mag-bg: #f8f7f4;          /* 雑誌の紙質をイメージした微かに温かみのある白 */
-  --mag-black: #1a1917;       /* 漆黒ではなくインクのような深いチャコール */
-  --mag-gray: #5a5854;        /* 本文用のやわらかなダークグレー */
-  --mag-accent: #a9182a;      /* 知性を感じるシックなボルドーレッド */
-  --mag-border: rgba(26, 25, 23, 0.08);
-}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body.page-interview {
-  margin: 0;
-  padding: 0;
-  background-color: var(--mag-bg);
-  color: var(--mag-black);
-  font-family: 'Noto Sans JP', sans-serif;
-  line-height: 2.1;
-  letter-spacing: 0.03em;
-  overflow-x: hidden;
-}
+<title>所属TOPライバーインタビュー｜Gemaris</title>
 
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+<meta name="description" content="スマホ1つで世界を変えるTOPライバーの思想インタビュー">
 
-/* =========================
-  HEADER
-========================= */
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 1px solid var(--mag-border);
-}
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-.header-inner {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<body>
 
-.logo {
-  height: 32px;
-}
+<header class="header">
+<div class="container header-inner">
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
+<a href="index.html">
+<img src="images/logo.png" alt="Gemaris" class="logo">
+</a>
 
-nav a {
-  color: var(--mag-black);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  transition: 0.3s;
-}
+<nav>
+<a href="index.html">TOP</a>
+<a href="staff.html">スタッフ</a>
+<a href="apply.html" class="apply-btn">応募する</a>
+</nav>
 
-nav a:hover {
-  color: var(--mag-accent);
-}
+</div>
+</header>
 
-nav .apply-btn {
-  border: 1px solid var(--mag-black);
-  padding: 6px 18px;
-  border-radius: 20px;
-  transition: all 0.3s;
-}
+<!-- =========================
+HERO (映画インタビュー風)
+========================= -->
+<section class="section interview-hero">
 
-nav .apply-btn:hover {
-  background-color: var(--mag-black);
-  color: #fff;
-}
+<div class="container" style="text-align:center;">
 
-/* =========================
-  HERO (カバーグラビア風)
-========================= */
-.interview-hero {
-  padding: 180px 0 100px;
-  text-align: center;
-  border-bottom: 1px solid var(--mag-black);
-  background: radial-gradient(circle at 80% 20%, rgba(169, 24, 42, 0.03) 0%, transparent 50%);
-}
+<div class="interview-tag">INTERVIEW / TOP LIVER</div>
 
-.interview-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  color: var(--mag-accent);
-  margin-bottom: 20px;
-}
+<h1 style="font-size:2.4rem; margin-top:20px;">
+スマホ1つで世界を変える。
+</h1>
 
-.interview-hero h1 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 800;
-  line-height: 1.3;
-  color: var(--mag-black);
-  margin: 0 auto 30px;
-  max-width: 800px;
-}
+<p class="section-lead" style="margin-top:15px;">
+泥臭く、美しく、リスナーと「奇跡のコミュニティ」を創り出すTOPライバーの思考法。
+</p>
 
-.hero-lead {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--mag-gray);
-  max-width: 680px;
-  margin: 0 auto 40px;
-}
+</div>
 
-.credit {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  border-top: 1px solid var(--mag-border);
-  display: inline-flex;
-  padding-top: 15px;
-}
+</section>
 
-.credit .speaker {
-  color: var(--mag-black);
-}
-.credit .date {
-  color: var(--mag-gray);
-}
+<!-- =========================
+ARTICLE BODY
+========================= -->
+<section class="section">
 
-/* =========================
-  ARTICLE LAYOUT
-========================= */
-.interview-container {
-  max-width: 760px; /* 読書に最適な、縦に美しく流れる道幅 */
-  margin: 0 auto;
-  padding: 80px 24px;
-}
+<div class="container interview-body">
 
-.lead-block {
-  font-size: 1.15rem;
-  color: var(--mag-black);
-  font-weight: 500;
-  border-left: 3px solid var(--mag-accent);
-  padding-left: 24px;
-  margin-bottom: 80px;
-}
+<p class="lead-block">
+スマホ1つで世界を変える。<br>
+泥臭く、美しく、リスナーと「奇跡のコミュニティ」を創り出すTOPライバーの思考法。
+</p>
 
-.interview-stream {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-}
+<hr class="divider">
 
-/* 質問と回答のブロック */
-.interview-row {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+<h2>◆ 配信を始めたきっかけ：悔しさをバネに掴んだ「本気」の切符</h2>
 
-.question h2 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  font-weight: 700;
-  line-height: 1.5;
-  color: var(--mag-black);
-  margin: 0;
-}
+<p>
+もともとライブ配信には興味があり、
+2022年の末にPocochaをダウンロードしたのが始まりです。
+最初は右も左もわからず、D帯で行き詰まっていました。
+そんな時、あるライバーから「この枠には100円、1000円の価値で
+楽しもうとするリスナーしかいない」と言われたんです。
+</p>
 
-/* 「Q.01」の数字を海外マガジン風に強調 */
-.question h2 span {
-  display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 2rem;
-  color: var(--mag-accent);
-  line-height: 1;
-  margin-bottom: 5px;
-}
+<p>
+それが猛烈に悔しくて。「だったら見返してやる！」と、
+本気でS帯を目指し始めました。
+</p>
 
-.answer p {
-  font-size: 1.05rem;
-  color: var(--mag-gray);
-  margin: 0 0 20px;
-}
-.answer p:last-child {
-  margin-bottom: 0;
-}
+<hr class="divider">
 
-/* マーケティング用のリスト */
-.marketing-points {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-  border-top: 1px solid var(--mag-border);
-  border-bottom: 1px solid var(--mag-border);
-}
+<h2>◆ リスナーの増やし方：自分という「商品」の価値を言語化する</h2>
 
-.marketing-points li {
-  padding: 15px 10px;
-  border-bottom: 1px solid var(--mag-border);
-  font-size: 0.95rem;
-  color: var(--mag-gray);
-}
-.marketing-points li:last-child {
-  border-bottom: none;
-}
+<p>
+一番大切なのは、やっぱり「リスナーのニーズに応えること」です。
+可愛い子やイケメンと話したい、癒やされたい、笑いたい……
+リスナーは様々な目的を持って配信を視聴しています。
+</p>
 
-.marketing-points li strong {
-  display: inline-block;
-  width: 90px;
-  color: var(--mag-black);
-  font-size: 1rem;
-}
+<p>
+一方で、ライバーは「自分という商品をどう売るか」という
+マーケティング視点が必要です。
+</p>
 
-/* =========================
-  PULL QUOTE (名言の抜き出し)
-========================= */
-.pull-quote {
-  margin: 40px 0;
-  padding: 40px 0;
-  border-top: 2px solid var(--mag-black);
-  border-bottom: 2px solid var(--mag-black);
-  text-align: center;
-}
+<p>
+価格（どのくらいの投げ銭が見合う価値を提供できているか）<br>
+差別化（他のライバーと何が違うのか）<br>
+信頼性（この人を応援して後悔しないか）
+</p>
 
-.pull-quote blockquote {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
-  font-weight: 800;
-  color: var(--mag-black);
-  line-height: 1.5;
-  margin: 0;
-}
+<p>
+これらを意識し、「自分の言葉や文章」で想いを発信して共感を得ること。
+伸びているライバーは、みんなこれを徹底しています。
+</p>
 
-/* =========================
-  CTA (マガジンエンド)
-========================= */
-.interview-cta {
-  padding: 100px 0;
-  text-align: center;
-  background-color: #f1efe9;
-  border-top: 1px solid var(--mag-border);
-}
+<p>
+リスナーの求めていることに応えつつ、自分らしさを表現していくことが、
+ファンを増やす絶対条件ですね。
+</p>
 
-.interview-cta h2 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  font-weight: 700;
-  margin-bottom: 15px;
-}
+<hr class="divider">
 
-.cta-lead {
-  color: var(--mag-gray);
-  font-size: 1.05rem;
-  margin-bottom: 40px;
-}
+<h2>◆ 枠周りの仕方とマナー：自枠の価値を高めることへの圧倒的こだわり</h2>
 
-.magazine-btn {
-  display: inline-block;
-  background-color: var(--mag-black);
-  color: #fff;
-  text-decoration: none;
-  padding: 16px 45px;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  border-radius: 30px;
-  transition: all 0.3s;
-}
+<p>
+「枠回りをする暇があるなら、1分でも長く自分の枠をつける」<br>
+――これが私のスタイルです。
+</p>
 
-.magazine-btn:hover {
-  background-color: var(--mag-accent);
-  transform: translateY(-2px);
-}
+<p>
+他を否定するわけではありませんが、自分のリスナーと向き合い、
+自枠のクオリティを上げることこそが最大のリスナー還元だと信じています。
+</p>
 
-/* =========================
-  FOOTER
-========================= */
-.footer {
-  padding: 30px 0;
-  background-color: var(--mag-bg);
-  text-align: center;
-  border-top: 1px solid var(--mag-border);
-}
+<hr class="divider">
 
-.footer p {
-  color: var(--mag-gray);
-  font-size: 0.8rem;
-  margin: 0;
-}
+<h2>◆ 配信をする目的：スマホ1つで繋がる、人生の「幸福」と「絶望」</h2>
 
-/* =========================
-  RESPONSIVE
-========================= */
-.sp-only { display: none; }
+<p>
+私が配信を続けるのは、ここでしか味わえない「至上の幸福」と
+「リアルな絶望」がそこにあるからです。
+</p>
 
-@media (max-width: 768px) {
-  .sp-only { display: block; }
-  .interview-hero { padding: 140px 0 60px; }
-  .interview-container { padding: 50px 24px; }
-  .interview-stream { gap: 50px; }
-  .pull-quote { padding: 30px 10px; }
-  nav nav a:not(.apply-btn) { display: none; } /* スマホ時はナビをシンプルに */
-}
+<p>
+こんなにも幸せでいいのかと思う日もあれば、立ち直れないくらい辛い日もある。
+人生に刺激を求め、あえて茨の道を歩みたい私にとって、配信は最高の舞台なんです。
+</p>
+
+<p>
+年齢、性別、出身もバラバラな人たちとスマホ1つで繋がり、
+私が配信をしなければ出会うことのなかったコミュニティが生まれる。
+そんな場所を自分の手で創り出せる機会があること自体、
+本当に幸せなことだと思います。
+</p>
+
+<hr class="divider">
+
+<h2>◆ 配信をする上での心構え：演者として枠をコントロールする</h2>
+
+<p>
+「よかったら見てください」ではなく、「来るなら絶対楽しませるよ」
+という配信者としての圧倒的な覚悟（圧）を持つようにしています。
+</p>
+
+<p>
+立場としてはリスナーが上かもしれませんが、
+エンターテインメントとして枠の空気感をコントロールするのはライバーです。
+</p>
+
+<p>
+スマホ越しでも人を動かす「圧倒的な熱量」が必要です。
+</p>
+
+<p>
+「見ていて楽しい」から「本気で応援したい」へと、
+感情を0から1に動かすために、自分の理由や目標を熱く伝え続けています。
+</p>
+
+<hr class="divider">
+
+<h2>◆ 配信時に気をつけていること：100人100色の受け取り方</h2>
+
+<p>
+私の放つ言葉や行動を「誰がどのように受け取るか」、
+常に複数のパターンを想像してから発信しています。
+</p>
+
+<p>
+配信には多様な価値観を持つ人が集まるからこそ、
+まずは「理解しようとする姿勢」を大切にしています。
+</p>
+
+<hr class="divider">
+
+<h2>◆ マネージャーとしての考え方</h2>
+
+<p>
+まずは「ライバーの気持ちに100%寄り添うこと」。
+</p>
+
+<p>
+モラルや方針として間違っていることは伝えつつ、
+背景まで一緒に考えることを大事にしています。
+</p>
+
+<p>
+そして「適切な目標設定」と「継続」。
+今のステップに合ったロードマップを提示することが重要だと考えています。
+</p>
+
+<hr class="divider">
+
+<h2>◆ 今後の意気込みと目標</h2>
+
+<p>
+一過性ではなく、誰もが納得する実力を持った
+「面白いS帯」を目指しています。
+</p>
+
+<p>
+結果だけでなく過程も大切にしながら、
+一歩ずつ進んでいきます。
+</p>
+
+<p>
+これまでの経験をすべて還元し、
+事務所を全力で盛り上げていきます。
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+CTA
+========================= -->
+<section class="section">
+
+<div class="container" style="text-align:center;">
+
+<h2>この思想に、共感しますか？</h2>
+
+<p class="section-lead">
+ただの配信ではなく、“表現”として戦う世界へ。
+</p>
+
+<a href="apply.html" class="button apply-button">
+応募する
+</a>
+
+</div>
+
+</section>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 Gemaris LLC</p>
+</div>
+</footer>
+
+</body>
+</html>
