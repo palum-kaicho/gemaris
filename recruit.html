@@ -10,23 +10,33 @@
 </head>
 <body>
 
-  <header class="header" style="position: relative; width: 100%; background: #ffffff !important; border-bottom: 1px solid #E5DDD1 !important; z-index: 9999;">
-    <div class="container header-inner" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 80px; display: flex; justify-content: space-between; align-items: center; background: #ffffff !important;">
-      <a href="index.html" style="display: flex; align-items: center;">
-        <img src="images/image(24).png" alt="Gemaris" class="logo" style="height: 40px; width: auto; max-height: 40px;">
-      </a>
-      <nav style="display: flex; align-items: center; gap: 20px;">
-        <a href="index.html#about" style="color: #1F1A1A !important; text-decoration: none; font-size: 0.95rem; font-weight: 600;">Gemarisとは</a>
-        <a href="index.html#support" style="color: #1F1A1A !important; text-decoration: none; font-size: 0.95rem; font-weight: 600;">サポート</a>
-        <a href="index.html#plans" style="color: #1F1A1A !important; text-decoration: none; font-size: 0.95rem; font-weight: 600;">契約プラン</a>
-        <a href="index.html#faq" style="color: #1F1A1A !important; text-decoration: none; font-size: 0.95rem; font-weight: 600;">FAQ</a>
-        <a href="staff.html" style="color: #1F1A1A !important; text-decoration: none; font-size: 0.95rem; font-weight: 600;">スタッフ紹介</a>
-        <a href="recruit.html" style="color: #1F1A1A !important; text-decoration: none; font-size: 0.95rem; font-weight: 600;">ライバー募集</a>
-        <a href="company.html" style="color: #1F1A1A !important; text-decoration: none; font-size: 0.95rem; font-weight: 600;">企業概要</a>
-        <a href="apply.html" class="apply-btn" style="background: #E50914 !important; color: #ffffff !important; text-decoration: none; font-size: 0.9rem; font-weight: 700; padding: 10px 20px; border-radius: 50px; white-space: nowrap;">応募する</a>
-      </nav>
+<!-- =========================
+HEADER
+========================= -->
+<header class="header">
+    <div class="container header-inner">
+        <a href="index.html">
+            <img src="images/image(24).png" alt="Gemaris" class="logo">
+        </a>
+
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" id="js-hamburger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- ナビゲーション本体 -->
+        <nav class="nav-menu" id="js-nav-menu">
+            <a href="#about">Gemarisとは</a>
+            <a href="#support">サポート</a>
+            <a href="#plans">契約プラン</a>
+            <a href="#faq">FAQ</a>
+            <a href="company.html">企業概要</a>
+            <a href="recruit.html">ライバー募集</a>
+            <a href="staff.html">スタッフ紹介</a>
+            <a href="apply.html" class="apply-btn">応募する</a>
+        </nav>
     </div>
-  </header>
+</header>
 
   <div class="recruit-page-wrapper">
     <div class="container-recruit">
@@ -80,6 +90,30 @@
       <p>&copy; 2026 Gemaris Live Creator Agency. All Rights Reserved.</p>
     </div>
   </footer>
+<script>
+    const hamburger = document.getElementById('js-hamburger');
+    const navMenu = document.getElementById('js-nav-menu');
 
+    // ハンバーガーボタンのクリックイベント
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('is-active');
+    });
+
+    // 💡 別のページから「戻る」で戻ってきたときに状態を完全リセットする魔法の処理
+    window.addEventListener('pageshow', (event) => {
+        // キャッシュから読み込まれた場合（戻るボタンなど）でも強制リセット
+        if (navMenu) {
+            navMenu.classList.remove('is-active');
+        }
+    });
+
+    // リンクをクリックしてメニューが閉じないバグもついでに予防（念のため）
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('is-active');
+        });
+    });
+</script>
 </body>
 </html>

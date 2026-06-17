@@ -204,6 +204,30 @@ FOOTER
     <p>© 2026 Gemaris LLC</p>
   </div>
 </footer>
+<script>
+    const hamburger = document.getElementById('js-hamburger');
+    const navMenu = document.getElementById('js-nav-menu');
 
+    // ハンバーガーボタンのクリックイベント
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('is-active');
+    });
+
+    // 💡 別のページから「戻る」で戻ってきたときに状態を完全リセットする魔法の処理
+    window.addEventListener('pageshow', (event) => {
+        // キャッシュから読み込まれた場合（戻るボタンなど）でも強制リセット
+        if (navMenu) {
+            navMenu.classList.remove('is-active');
+        }
+    });
+
+    // リンクをクリックしてメニューが閉じないバグもついでに予防（念のため）
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('is-active');
+        });
+    });
+</script>
 </body>
 </html>
