@@ -1,0 +1,85 @@
+/* ==========================================================================
+   COMPANY PAGE SPECIFIC (企業概要ページ専用スタイル)
+   ========================================================================== */
+/* 企業概要を包むラグジュアリーな特製カード枠 */
+.company-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(229, 221, 209, 0.8); /* 上品なゴールドベージュ */
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(215, 201, 182, 0.2);
+}
+
+/* テーブル全体の境界線とレイアウト調整 */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+}
+
+/* 各行の区切りを美しい極細の境界線に */
+.company-table tr {
+  border-bottom: 1px solid rgba(229, 221, 209, 0.5);
+}
+
+.company-table tr:last-child {
+  border-bottom: none; /* 最後の行の線は消してスッキリ */
+}
+
+/* 左側：項目名（会社名、代表者など） */
+.company-table th {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+  padding: 24px 16px;
+  color: var(--gem-black);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+/* ほんのりアクセントとして項目の左側に細い赤線を仕込む小技 */
+.company-table th::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 3px;
+  height: 14px;
+  background: var(--gem-red);
+  border-radius: 2px;
+}
+
+/* 右側：具体的な中身 */
+.company-table td {
+  width: 75%;
+  padding: 24px 16px;
+  color: var(--gem-gray);
+  line-height: 1.8;
+}
+
+/* スマホの時はテーブルを縦に並び替えて崩れを防止 */
+@media screen and (max-width: 768px) {
+  .company-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .company-table tr {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+  }
+  
+  .company-table th, 
+  .company-table td {
+    width: 100% !important;
+    padding: 6px 0 !important;
+  }
+  
+  .company-table th::before {
+    top: 10px; /* スマホ時の赤線の位置微調整 */
+  }
+}
