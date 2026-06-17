@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/* ===================================================
+  ライバー募集ページ レイアウト再構築CSS
+=================================================== */
+
+.recruit-page-wrapper {
+  background-color: #f7f5f0 !important;
+  padding: 80px 0 !important;
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif !important;
+  color: #1F1A1A !important;
+}
+
+.container-recruit {
+  max-width: 900px !important; /* 読みやすさのために全体の幅を少しスマートに */
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+/* ===================================================
+  ① メッセージセクション（上段）
+=================================================== */
+.section-message {
+  text-align: center !important;
+  margin-bottom: 50px !important;
+}
+
+.section-message h2 {
+  font-size: 2.2rem !important;
+  color: #1F1A1A !important;
+  font-weight: 700 !important;
+  margin-bottom: 35px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.section-message h2::after {
+  content: '' !important;
+  display: block !important;
+  width: 60px !important;
+  height: 4px !important;
+  background: #E50914 !important;
+  margin: 20px auto 0 !important;
+  border-radius: 2px !important;
+}
+
+.main-text p {
+  font-size: 1.05rem !important; /* 文字を少しだけ大きくして読みやすく */
+  color: #4A4242 !important;
+  line-height: 2.0 !important;   /* 行間を広げて高級感を出す */
+  margin-bottom: 24px !important;
+  text-align: left !important;  /* 左寄せにして、中央寄せのガタツキを防止 */
+}
+
+/* ===================================================
+  ② ボタンセクション（中段：横並び）
+=================================================== */
+.section-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  margin-bottom: 80px !important; /* 下のキャラエリアとの間にしっかり余白を確保 */
+}
+
+.section-buttons .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 280px !important;
+  height: 56px !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+}
+
+.btn-red {
+  background: #E50914 !important;
+  color: #ffffff !important;
+}
+.btn-red:hover {
+  background: #b8070f !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(229, 9, 20, 0.2) !important;
+}
+
+.btn-discord {
+  background: #5865F2 !important;
+  color: #ffffff !important;
+}
+.btn-discord:hover {
+  background: #454FBF !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.2) !important;
+}
+
+/* ===================================================
+  ③ キャラクターセクション（下段：横並びでお出迎え）
+=================================================== */
+.section-characters {
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: flex-end !important;
+  gap: 40px !important;
+  border-top: 2px dashed #E5DDD1 !important; /* 区切り線を入れて別セクション化 */
+  padding-top: 60px !important;
+}
+
+.char-box {
+  flex: 1 !important;
+  max-width: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.char-img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 220px !important;
+  object-fit: contain !important;
+}
+
+/* 吹き出しの共通スタイル */
+.balloon {
+  position: relative !important;
+  background: #ffffff !important;
+  border: 2px solid #E5DDD1 !important;
+  border-radius: 16px !important;
+  padding: 15px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  font-weight: 600 !important;
+  color: #1F1A1A !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 8px 24px rgba(215, 201, 182, 0.25) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 吹き出しの三角突起 */
+.balloon::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -12px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  border-width: 12px 10px 0 !important;
+  border-style: solid !important;
+  border-color: #ffffff transparent transparent !important;
+  z-index: 2 !important;
+}
+.balloon::before {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  border-width: 15px 12px 0 !important;
+  border-style: solid !important;
+  border-color: #E5DDD1 transparent transparent !important;
+  z-index: 1 !important;
+}
+
+/* ===================================================
+  スマホ対応レスポンシブ
+=================================================== */
+@media (max-width: 768px) {
+  .section-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .section-characters {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 50px !important;
+  }
+  .char-box {
+    max-width: 260px !important;
+  }
+  .section-message h2 {
+    font-size: 1.6rem !important;
+  }
+}
