@@ -19,29 +19,28 @@
 HEADER
 ========================= -->
 <header class="header">
+  <div class="container header-inner">
+    <a href="index.html">
+      <img src="images/image(24).png" alt="Gemaris" class="logo">
+    </a>
 
-<div class="container header-inner">
+    <button class="hamburger" id="js-hamburger">
+      <span></span><span></span><span></span>
+    </button>
 
-<a href="index.html">
-<img src="images/logo.png" alt="Gemaris" class="logo">
-</a>
-
-<nav class="nav">
-
-<a href="#about">Gemarisとは</a>
-<a href="#support">サポート</a>
-<a href="#plans">契約プラン</a>
-<a href="#faq">FAQ</a>
-<a href="company.html">企業概要</a>
-<a href="recruit.html">ライバー募集</a>
-<a href="staff.html">スタッフ紹介</a>
-<a href="apply.html" class="apply-btn">応募する</a>
-
-</nav>
-
-</div>
-
+    <nav class="nav-menu" id="js-nav-menu">
+      <a href="#about">Gemarisとは</a>
+      <a href="#support">サポート</a>
+      <a href="#plans">契約プラン</a>
+      <a href="#faq">FAQ</a>
+      <a href="company.html">企業概要</a>
+      <a href="recruit.html">ライバー募集</a>
+      <a href="staff.html">スタッフ紹介</a>
+      <a href="apply.html" class="apply-btn">応募する</a>
+    </nav>
+  </div>
 </header>
+
 
 
 <!-- =========================
@@ -208,24 +207,24 @@ FOOTER
     const hamburger = document.getElementById('js-hamburger');
     const navMenu = document.getElementById('js-nav-menu');
 
-    // ハンバーガーボタンのクリックイベント
+    // ハンバーガーボタンのクリックイベント（ボタンの✕変形とメニュー展開を完全連動）
     hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
         navMenu.classList.toggle('is-active');
     });
 
-    // 💡 別のページから「戻る」で戻ってきたときに状態を完全リセットする魔法の処理
+    // 戻るボタン対策の魔法（状態リセット）
     window.addEventListener('pageshow', (event) => {
-        // キャッシュから読み込まれた場合（戻るボタンなど）でも強制リセット
-        if (navMenu) {
-            navMenu.classList.remove('is-active');
-        }
+        if (navMenu) navMenu.classList.remove('is-active');
+        if (hamburger) hamburger.classList.remove('is-active');
     });
 
-    // リンクをクリックしてメニューが閉じないバグもついでに予防（念のため）
+    // メニュー内のリンクをクリックした時に自動で閉じる
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('is-active');
+            hamburger.classList.remove('is-active');
         });
     });
 </script>

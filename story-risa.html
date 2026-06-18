@@ -14,34 +14,28 @@
 </head>
 <body class="page-interview">
 
-<!-- =========================
-HEADER
-========================= -->
 <header class="header">
+  <div class="container header-inner">
+    <a href="index.html">
+      <img src="images/image(24).png" alt="Gemaris" class="logo">
+    </a>
 
-<div class="container header-inner">
+    <button class="hamburger" id="js-hamburger">
+      <span></span><span></span><span></span>
+    </button>
 
-<a href="index.html">
-<img src="images/logo.png" alt="Gemaris" class="logo">
-</a>
-
-<nav class="nav">
-
-<a href="#about">Gemarisとは</a>
-<a href="#support">サポート</a>
-<a href="#plans">契約プラン</a>
-<a href="#faq">FAQ</a>
-<a href="company.html">企業概要</a>
-<a href="recruit.html">ライバー募集</a>
-<a href="staff.html">スタッフ紹介</a>
-<a href="apply.html" class="apply-btn">応募する</a>
-
-</nav>
-
-</div>
-
+    <nav class="nav-menu" id="js-nav-menu">
+      <a href="#about">Gemarisとは</a>
+      <a href="#support">サポート</a>
+      <a href="#plans">契約プラン</a>
+      <a href="#faq">FAQ</a>
+      <a href="company.html">企業概要</a>
+      <a href="recruit.html">ライバー募集</a>
+      <a href="staff.html">スタッフ紹介</a>
+      <a href="apply.html" class="apply-btn">応募する</a>
+    </nav>
+  </div>
 </header>
-
 
   <section class="interview-hero">
     <div class="container">
@@ -57,7 +51,7 @@ HEADER
     </div>
   </section>
 
-  <main class="interview-container">
+  <main class="interview-container container">
 
     <div class="lead-block">
       スマホ1つで世界を変える。<br>
@@ -125,7 +119,7 @@ HEADER
           <h2><span>Q.05</span>配信をする上での心構え：演者として枠をコントロールする</h2>
         </div>
         <div class="answer">
-          <p>「よかったら見てください」ではなく、「来るなら絶対楽しませるよ」という配信者としての圧倒的な覚悟（圧）を持つようにしています。</p>
+          <p>「よかったら見てください」ではなく、「来るなら絶対楽しませるよ」という配信者としての圧倒的な覚覚悟（圧）を持つようにしています。</p>
           <p>立場としてはリスナーが上かもしれませんが、エンターテインメントとして枠の空気感をコントロールするのはライバーです。</p>
           <p>スマホ越しでも人を動かす「圧倒的な熱量」が必要です。</p>
           <p>「見ていて楽しい」から「本気で応援したい」へと、感情を0から1に動かすために、自分の理由や目標を熱く伝え続けています。</p>
@@ -148,7 +142,7 @@ HEADER
         </div>
         <div class="answer">
           <p>まずは「ライバーの気持ちに100%寄り添うこと」。モラルや方針として間違っていることは伝えつつ、背景まで一緒に考えることを大事にしています。</p>
-          <p>そして「適切な目標設定」と「継続」。今のステップに合ったロードマップを提示することが重要だと考えています。</p>
+          <p>接着して「適切な目標設定」と「継続」。今のステップに合ったロードマップを提示することが重要だと考えています。</p>
         </div>
       </article>
 
@@ -179,28 +173,30 @@ HEADER
       <p>&copy; 2026 Gemaris LLC. All Rights Reserved.</p>
     </div>
   </footer>
+
 <script>
     const hamburger = document.getElementById('js-hamburger');
     const navMenu = document.getElementById('js-nav-menu');
 
-    // ハンバーガーボタンのクリックイベント
     hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
         navMenu.classList.toggle('is-active');
     });
 
-    // 💡 別のページから「戻る」で戻ってきたときに状態を完全リセットする魔法の処理
     window.addEventListener('pageshow', (event) => {
-        // キャッシュから読み込まれた場合（戻るボタンなど）でも強制リセット
         if (navMenu) {
             navMenu.classList.remove('is-active');
         }
+        if (hamburger) {
+            hamburger.classList.remove('is-active');
+        }
     });
 
-    // リンクをクリックしてメニューが閉じないバグもついでに予防（念のため）
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('is-active');
+            hamburger.classList.remove('is-active');
         });
     });
 </script>
