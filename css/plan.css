@@ -1,111 +1,140 @@
-/* ==========================================================================
-   契約プランページ（plan.html）専用スタイル
-   ========================================================================== */
+/* ==========================================================
+PLAN COMPARISON
+========================================================== */
 
-/* 下層共通ページヘッダー */
-.page-header {
-  background: #f8f9fa;
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 1px solid #eee;
-}
-.page-header h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-.page-header p {
-  font-size: 14px;
-  color: #666;
+.plan-comparison-section{
+background:#faf8f3;
 }
 
-/* 比較表のラッパー（横スクロール保証） */
-.table-wrapper {
-  width: 100% !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  margin: 30px 0 !important;
-  border: 1px solid #dddddd !important;
-  border-radius: 6px !important;
-  background-color: #ffffff !important;
+.comparison-title{
+text-align:center;
+margin-bottom:15px;
 }
 
-/* テーブル本体 */
-.table-wrapper table.comparison-table {
-  width: 100% !important;
-  min-width: 480px !important;
-  border-collapse: collapse !important;
-  border-spacing: 0 !important;
-  background-color: #ffffff !important;
-  font-size: 14px;
-  margin: 0 !important;
+.comparison-cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+margin-top:50px;
 }
 
-/* ヘッダーのスタイル強制 */
-.table-wrapper table.comparison-table th {
-  background-color: #333333 !important;
-  color: #ffffff !important;
-  font-weight: bold !important;
-  padding: 14px 12px !important;
-  text-align: center !important;
-  border-bottom: 2px solid #222222 !important;
-}
-.table-wrapper table.comparison-table th:first-child {
-  text-align: left !important;
+.compare-card{
+background:#fff;
+border:1px solid #e5ddd1;
+border-radius:20px;
+overflow:hidden;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
 }
 
-/* 通常セルのスタイル強制 */
-.table-wrapper table.comparison-table td {
-  padding: 14px 12px !important;
-  border-bottom: 1px solid #eeeeee !important;
-  color: #333333 !important;
-  line-height: 1.5 !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-  background-color: #ffffff !important;
+.compare-head{
+padding:35px 25px;
+text-align:center;
+border-bottom:1px solid #eee;
 }
 
-/* 左端の「サポート内容」列が絶対に潰れないようにガード */
-.table-wrapper table.comparison-table td:first-child {
-  text-align: left !important;
-  font-weight: bold !important;
-  color: #444444 !important;
-  min-width: 140px !important;
+.compare-head h3{
+margin:0;
+font-size:28px;
 }
 
-/* 特集列（フルサポート）の背景色 */
-.table-wrapper table.comparison-table .col-featured {
-  background-color: #f0f7ff !important;
+.compare-rate{
+margin-top:12px;
+color:#666;
 }
 
-/* 各種装飾用クラス */
-.table-wrapper table.comparison-table .td-accent {
-  color: #ff4500 !important;
-  font-weight: bold !important;
-}
-.table-wrapper table.comparison-table .td-bold {
-  font-weight: bold !important;
-}
-.table-wrapper table.comparison-table .td-blue {
-  color: #007bff !important;
-  font-weight: bold !important;
-}
-.table-wrapper table.comparison-table .td-none {
-  color: #ccc !important;
+.compare-rate span{
+display:block;
+margin-top:8px;
+color:#d6001c;
+font-size:34px;
+font-weight:700;
 }
 
-/* モバイル調整 */
-@media screen and (max-width: 768px) {
-  .page-header {
-    padding: 30px 15px;
-  }
-  .page-header h1 {
-    font-size: 20px;
-  }
-  .table-wrapper table.comparison-table {
-    font-size: 12px;
-  }
-  .table-wrapper table.comparison-table td {
-    padding: 10px 8px !important;
-  }
+.compare-list{
+list-style:none;
+margin:0 !important;
+padding:0 !important;
+}
+
+.compare-list li{
+margin:0 !important;
+padding:18px 24px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+border-bottom:1px solid #f1f1f1;
+}
+
+.compare-list li:last-child{
+border-bottom:none;
+}
+
+.compare-list span{
+font-weight:600;
+}
+
+.compare-list strong{
+text-align:right;
+}
+
+.ok{
+color:#2563eb;
+font-weight:700;
+}
+
+.ng{
+color:#bcbcbc;
+}
+
+.featured{
+border:2px solid #d6001c;
+position:relative;
+}
+
+.featured-label{
+background:#d6001c;
+color:#fff;
+
+text-align:center;
+
+font-size:13px;
+font-weight:700;
+
+padding:10px;
+}
+
+.comparison-note{
+margin-top:25px;
+text-align:center;
+color:#666;
+font-size:14px;
+}
+
+/* ==========================
+SP
+========================== */
+
+@media(max-width:768px){
+
+.comparison-cards{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.compare-head h3{
+font-size:22px;
+}
+
+.compare-rate span{
+font-size:28px;
+}
+
+.compare-list li{
+padding:15px 18px;
+}
+
 }
