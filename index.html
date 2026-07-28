@@ -3,284 +3,320 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gemaris｜あなたの中の原石を、最高の輝きへ。</title>
-  <meta name="description" content="未経験歓迎。配信環境構築・機材貸与・活動活動分析・画像制作支援まで行う育成型ライバー事務所 Gemaris">
+  <title>Gemaris（ジェマリス）公式</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    /* 固定ヘッダーの干渉を確実に防いで最前面に出すスタイル */
+    .index-support-plans-section {
+      position: relative;
+      z-index: 50 !important; 
+    }
+    .comb-banner-wrap {
+      position: relative;
+      z-index: 51 !important;
+    }
+    map area {
+      cursor: pointer;
+      display: inline-block;
+    }
+  </style>
 </head>
-<body>
+<body class="gemaris-theme">
 
-<header class="header">
-  <div class="container header-inner">
-    <a href="index.html">
-      <img src="images/image(24).png" alt="Gemaris" class="logo">
-    </a>
-
-    <button class="hamburger" id="js-hamburger">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-menu" id="js-nav-menu">
-      <a href="#about">Gemarisとは</a>
-      <a href="support.html">サポート</a>
-      <a href="plan.html">契約プラン</a>
-      <a href="faq.html">FAQ</a>
-      <a href="recruit.html">ライバー募集</a>
-      <a href="staff.html">スタッフ紹介</a>
-      <a href="apply.html" class="apply-btn">応募する</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-background">
-    <img src="images/image(24).png" alt="" class="hero-logo-bg">
-  </div>
-  <div class="container hero-inner">
-    <img src="images/image(24).png" alt="Gemaris" class="hero-logo">
-    <p class="hero-category">育成型ライバー事務所</p>
-    <h1>あなたの中の原石を、<br>最高の輝きへ。</h1>
-    <p class="hero-text">Gemarisは、一人ひとりの才能を大切に育てる育成型ライバー事務所です。</p>
-    <p class="hero-text">未経験者から経験者まで、それぞれの目標に合わせたサポートを提供します。</p>
-    <div class="hero-buttons">
-      <a href="apply.html" class="button apply-button">応募はこちら</a>
-      <a href="https://discord.gg/XXXXXXXX" target="_blank" class="button discord-button">Discordに参加する</a>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="section">
-  <div class="container">
-    <h2>Gemarisとは</h2>
-    <p class="section-lead">
-      Gemarisは、Gemma（宝石・芽）／Iris（虹・橋渡し）／Aris（最高へ・立ち上がる）という想いから生まれた名前です。
-    </p>
-    <div class="concept-grid">
-      <div class="concept-card">
-        <h3>Gemma</h3>
-        <p>宝石。そして芽吹く才能。</p>
-        <p>まだ磨かれていない原石も、未来の可能性を秘めています。</p>
-      </div>
-      <div class="concept-card">
-        <h3>Iris</h3>
-        <p>虹。そして人と人を繋ぐ存在。</p>
-        <p>ライバーとリスナー、未来を繋ぐ橋になります。</p>
-      </div>
-      <div class="concept-card">
-        <h3>Aris</h3>
-        <p>最高へ。そして立ち上がる。</p>
-        <p>挑戦する人が、自分らしい輝きを見つけられる場所。</p>
-      </div>
-    </div>
-
-    <div class="origin-message">
-      <p>一人ひとりのライバーは同じではありません。</p>
-      <p>それぞれが違う色を持つ宝石です。</p>
-      <p>Gemarisは、その個性を磨き上げ、最高の輝きへ導きます。</p>
-      <div style="margin-top:40px;">
-        <img src="images/kaichoiris.png" alt="Gemaris理念イメージ">
-      </div>
-      <p style="margin-top:30px; font-weight:700;">あなたの“原石”を見つけてみませんか</p>
-    </div>
-  </div>
-</section>
-
-<section id="plans" class="section">
-  <div class="container">
-    <h2>契約プラン</h2>
-    <p class="section-lead">ライバーの活動スタイルに合わせて2つのプランを用意しています。</p>
-    <div class="plan-grid plan-teaser-grid">
-      <div class="plan-card">
-        <h3>セルフプロ契約</h3>
-        <div class="plan-rate">還元率 100～120%</div>
-        <p>配信経験者・自走できる方向けの自由な活動プラン。</p>
-      </div>
-      <div class="plan-card featured">
-        <h3>フルサポート契約</h3>
-        <div class="plan-rate">還元率 85%〜105%</div>
-        <p>未経験者おすすめ。個別戦略、配信分析、機材貸与など全てをバックアップ。</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="plan.html" class="button apply-button">プランの解説・詳細を見る</a>
-    </div>
-  </div>
-</section>
-
-<section id="support" class="section">
-  <div class="container">
-    <h2>充実の活動支援（機材貸与・経費補助）</h2>
-    <p class="section-lead">Gemarisでは、ライバーが配信活動に専念できるよう、環境面と金銭面の両方から強力にサポートします。</p>
-    
-    <div class="support-summary-box" style="background:#f9f9f9; padding:30px; border-radius:8px; margin-bottom:30px; text-align:left;">
-      <ul style="list-style-type:disc; padding-left:20px; line-height:1.8;">
-        <li><strong>機材支援制度：</strong>フルサポート契約者には音源用PCやマイク（AG-01等）など配信一式を2ヶ月無償貸与。</li>
-        <li><strong>経費補助制度：</strong>サムネイル制作、画像素材、配信用の小道具やリスナー向けグッズ制作費用をバックアップ。</li>
-        <li><strong>配信技術・分析：</strong>OBSの導入支援からSE/BGM設計、リスナー獲得のための成長分析までプロのスタッフが並走。</li>
-      </ul>
-    </div>
-
-    <div style="text-align:center;">
-      <a href="support.html" class="button apply-button">サポート・支援制度の詳細を見る</a>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="section faq-section">
-  <div class="container">
-    <h2>よくある質問</h2>
-    <p class="section-lead">応募前によくいただく代表的なご質問をピックアップしました。</p>
-    
-    <div class="faq-list-wrapper">
-      <div class="faq-item">
-        <h3>Q. 配信未経験でも応募できますか？</h3>
-        <p>もちろん可能です。Gemarisでは未経験者向けのサポート体制を整えています。機材の接続方法からOBS設定、初配信まで一緒にサポートします。</p>
-      </div>
-      <div class="faq-item">
-        <h3>Q. 顔出しは必須ですか？</h3>
-        <p>必須ではありません。顔出し配信・ラジオ配信・趣味配信など、ご自身に合った活動スタイルを選択できます。</p>
-      </div>
-      <div class="faq-item">
-        <h3>Q. ノルマはありますか？</h3>
-        <p>ありません。Gemarisでは数字だけを追う活動ではなく、継続的な成長を大切にしています。</p>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top:40px;">
-      <a href="faq.html" class="button apply-button">その他のよくある質問を見る</a>
-    </div>
-  </div>
-</section>
-
-<section id="recruit-teaser" class="recruit-teaser-section">
-  <div class="container recruit-teaser-container">
-    <h2>WANTED</h2>
-    <p class="section-lead">あなたの中の原石を、最高の輝きへ。一緒に歩む仲間を募集中。</p>
-    <div class="recruit-teaser-card">
-      <div class="recruit-teaser-text">
-        <span class="recruit-teaser-badge">未経験・所属コンサル希望歓迎</span>
-        <h3>充実のサポート環境で、<br>あなたの配信活動をはじめませんか？</h3>
-        <p class="recruit-teaser-desc">
-          Gemaris（ジェマリス）では、機材の無償貸与や音源用OBSの導入支援等、あなたが「自分らしいエンタメ」を表現するためのすべてをバックアップします。ノルマはありません。まずは詳細をチェックしてみてください。
-        </p>
-        <div class="recruit-teaser-btn-wrap">
-          <a href="recruit.html" class="button apply-button recruit-teaser-btn">募集要項・詳細を見る</a>
-        </div>
-      </div>
-      <div class="recruit-teaser-image">
-        <img src="images/kaicholive.png" alt="ライバー募集イメージ">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section story-section">
-  <div class="container">
-    <h2>所属ライバーの思想</h2>
-    <p class="section-lead">なぜ彼らは、エンタメの最前線に立ち続けるのか。</p>
-    <div class="story-grid">
-      <a href="story-kaicho.html" class="story-card">
-        <div class="story-card-inner">
-          <span class="story-tag">INTERVIEW</span>
-          <h3>エンタメだけで頂点を狙う男の哲学</h3>
-          <span class="story-more">STORY を読む</span>
-        </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Gemaris Logo" class="logo">
       </a>
-      <a href="story-risa.html" class="story-card">
-        <div class="story-card-inner">
-          <span class="story-tag">INTERVIEW</span>
-          <h3>スマホ1つで世界を変える思考法</h3>
-          <span class="story-more">STORY を読む</span>
+      <button class="hamburger" id="js-hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="js-nav-menu">
+        <a href="index.html">TOP</a>
+        <a href="index.html#plans">サポート・プラン</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#recruit-teaser">リクルート</a>
+        <a href="index.html#story-section">インタビュー</a>
+        <a href="index.html#staff-teaser">スタッフ</a>
+        <a href="apply.html" class="apply-btn">応募はこちら</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="top-hero-section" style="position: relative; overflow: hidden;">
+    <div class="container wide-bleed-container">
+      <div class="top-img-container visual-overlay-wrapper">
+        <img src="images/TOP.png" alt="あなたの中の原石を、最高の輝きへ。" class="top-main-img" style="width: 100%; height: auto; display: block;">
+        <a href="apply.html" class="map-replacement-link link-apply" title="応募はこちら"></a>
+        <a href="https://discord.gg/XXXXXXXX" target="_blank" class="map-replacement-link link-discord" title="Discordに参加する"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section index-support-plans-section" id="plans" style="padding: 60px 0 40px 0; background: transparent; position: relative; overflow: hidden;">
+    <div class="container wide-bleed-container">
+      <div class="comb-banner-wrap">
+        <img src="images/index-support.png" alt="充実の活動支援と選べる2つの契約プラン" class="comb-img-map-target" usemap="#index-comb-map" id="js-index-comb-img" style="width: 100%; height: auto; display: block; border: none; position: relative; z-index: 52;">
+        
+        <map name="index-comb-map" id="index-comb-map">
+          <area shape="rect" coords="90,1070,1035,1210" href="support.html" alt="サポート・支援制度の詳細を見る" class="map-link">
+          <area shape="rect" coords="90,2220,1035,2380" href="plan.html" alt="プランの詳細を見る" class="map-link">
+        </map>
+      </div>
+    </div>
+  </section>
+
+<!-- ==========================================================================
+     Palmuライバー限定特別キャンペーンセクション
+     ========================================================================== -->
+<section class="section index-palmu-campaign-section" id="palmu-campaign" style="padding: 40px 0; background: transparent; position: relative; overflow: hidden;">
+  <div class="container wide-bleed-container">
+    <div class="main-content-card" style="margin: 0 10px; background: linear-gradient(135deg, #ffffff 0%, #faf7f2 100%); border: 1px solid rgba(156, 42, 42, 0.2);">
+      
+      <!-- セクションヘッダー -->
+      <div class="card-header-luxury" style="text-align: center; border-bottom: 1px dashed rgba(229, 221, 209, 0.8);">
+        <span style="letter-spacing: 0.15em;">SPECIAL CAMPAIGN</span>
+        <h2 style="font-size: 1.5rem; color: #2b2b2b; margin-top: 5px;">Palmuライバー限定 特別キャンペーン</h2>
+      </div>
+
+      <p class="card-lead-text" style="text-align: center; font-size: 0.95rem; margin-bottom: 25px;">
+        GemarisではPalmuで配信を開始するライバー様を対象に、<br>スタートダッシュを強力に<br>バックアップする特別報酬＆特典を<br>ご用意しています！
+      </p>
+
+      <!-- 導線カード2列エリア -->
+      <div class="palmu-banner-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        
+        <!-- カード1: Palmuキャンペーン報酬 (新規向け) -->
+        <div class="palmu-nav-card" style="flex: 1; min-width: 260px; background: #ffffff; border: 1px solid rgba(229, 221, 209, 0.8); border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span style="display: inline-block; background: #9c2a2a; color: #fff; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;">新規ライバー対象</span>
+            <h3 style="font-size: 1.2rem; font-weight: 600; color: #2b2b2b; margin-bottom: 10px;">Palmuキャンペーン報酬</h3>
+            <p style="font-size: 0.85rem; color: #666; line-height: 1.6; margin-bottom: 15px;">
+              初配信からランク達成や継続配信で豪華ボーナス！B到達・A到達・U18限定報酬などの詳細はこちら。
+            </p>
+          </div>
+          <a href="palmu-bonus.html" class="gemaris-luxury-final-btn" style="font-size: 0.9rem; padding: 10px 20px; width: 100%; box-sizing: border-box; display: block; margin-top: 10px;">
+            キャンペーン詳細を見る
+          </a>
         </div>
-      </a>
-      <a href="apply.html" class="story-card story-cta-card">
-        <div class="story-card-inner">
-          <span class="story-tag cta-tag">WANTED</span>
-          <h3>あなたの番です</h3>
-          <p>次にストーリーを書くのはあなたかもしれない</p>
-          <span class="story-more">未来を変える</span>
+
+        <!-- カード2: プレミアスタートキャンペーン (経験者向け) -->
+        <div class="palmu-nav-card" style="flex: 1; min-width: 260px; background: #ffffff; border: 1px solid rgba(156, 42, 42, 0.3); border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(156, 42, 42, 0.08); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; right: 0; background: #6a1b1b; color: #fff; font-size: 0.65rem; padding: 2px 10px; border-bottom-left-radius: 8px; font-weight: bold;">経験者優遇</div>
+          <div>
+            <span style="display: inline-block; background: #2b2b2b; color: #fff; font-size: 0.75rem; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;">他アプリ実績者対象</span>
+            <h3 style="font-size: 1.2rem; font-weight: 600; color: #2b2b2b; margin-bottom: 10px;">プレミアスタート<br>キャンペーン</h3>
+            <p style="font-size: 0.85rem; color: #666; line-height: 1.6; margin-bottom: 15px;">
+              B1ランクスタートや月給保証制度、最大2倍の特別増額ボーナスなど、圧倒的優遇プログラムを用意！
+            </p>
+          </div>
+          <a href="premier-campaign.html" class="gemaris-luxury-final-btn" style="font-size: 0.9rem; padding: 10px 20px; width: 100%; box-sizing: border-box; display: block; margin-top: 10px; background: #9c2a2a;">
+            プレミア特典を見る
+          </a>
         </div>
-      </a>
+
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="section staff-teaser">
-  <div class="container">
-    <h2>支える人を知ることが、安心につながる</h2>
-    <p class="section-lead">運営スタッフが一人ひとりをサポートしています。</p>
-    <div class="company-link-card">
-      <h3>スタッフ紹介</h3>
-      <p>どんな人が支えているのかを見ることで、不安は大きく減ります。</p>
-      <img src="images/iris-main.png" alt="運営イメージ" class="staff-teaser-img">
-      <a href="staff.html" class="button apply-button">スタッフ紹介を見る</a>
+  <section class="section index-faq-section" id="faq" style="padding: 40px 0; background: transparent; position: relative; overflow: hidden;">
+    <div class="container wide-bleed-container">
+      <div class="apply-banner-wrap">
+        <img src="images/index-qa.png" alt="FAQ よくある質問" style="width: 100%; height: auto; display: block; border: none;">
+        <a href="faq.html" class="apply-invisible-link link-faq-more" style="width: 76%; height: 5.6%; left: 12%; top: 91.3%;" aria-label="その他のよくある質問を見る"></a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="discord-section section">
-  <div class="container">
-    <h2>まずはDiscordへ</h2>
-    <p>応募前でもOKです。</p>
-    <a href="https://discord.gg/XXXXXXXX" target="_blank" class="button discord-button">参加する</a>
-  </div>
-</section>
-
-<section class="cta-section section">
-  <div class="container">
-    <h2>あなたの挑戦を待っています</h2>
-    <p class="section-lead">必要なのは「やってみたい」という気持ちだけです。</p>
-    <div class="cta-buttons">
-      <a href="apply.html" class="button apply-button">ライバー応募</a>
-      <a href="apply.html" class="button apply-button">マネージャー応募</a>
-      <a href="apply.html" class="button apply-button">スカウト応募</a>
+  <section class="section index-recruit-teaser-section" style="padding: 40px 0; background: transparent; position: relative; overflow: hidden;">
+    <div class="container wide-bleed-container">
+      <div class="main-content-card" id="recruit-teaser" style="padding: 0; background: transparent; box-shadow: none;">
+        <div class="recruit-banner-wrap">
+          <img src="images/recruit.png" alt="Gemaris ライバー募集 WANTED（募集要項・詳細を見る）" class="recruit-img-map-target" usemap="#index-recruit-map" id="js-index-recruit-img" style="width: 100%; height: auto; display: block; border: none;">
+          <map name="index-recruit-map">
+            <area shape="rect" coords="145,2170,980,2330" href="recruit.html" alt="募集要項・詳細を見る" class="map-link">
+          </map>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-logo">
-      <img src="images/image(24).png" alt="Gemaris">
+  <section class="section story-section" style="padding: 60px 0; background-color: #faf7f2; position: relative; overflow: hidden;">
+    <div id="story-section" style="position: absolute; top: -80px; left: 0;"></div>
+    <div class="container wide-bleed-container">
+      
+      <div class="story-image-wrapper-main" style="position: relative; width: 100%; margin: 0 auto;">
+        <img src="images/index-story.png" alt="所属ライバーの思想" style="width: 100%; height: auto; display: block;">
+        
+        <a href="story-kaicho.html" class="story-invisible-link link-kaicho" style="position: absolute; display: block; width: 90%; height: 27%; left: 5%; top: 29.5%; background: rgba(255, 255, 255, 0); z-index: 10; cursor: pointer;" aria-label="エンタメだけで頂点を狙う男の哲学 STORYを読む"></a>
+        
+        <a href="story-risa.html" class="story-invisible-link link-risa" style="position: absolute; display: block; width: 90%; height: 27%; left: 5%; top: 59.5%; background: rgba(255, 255, 255, 0); z-index: 10; cursor: pointer;" aria-label="スマホ1つで世界を変える思考法 STORYを読む"></a>
+      </div>
+
+      <div class="story-image-wrapper-cta" style="position: relative; width: 100%; margin: 0 auto;">
+        <a href="apply.html" style="display: block; text-decoration: none; cursor: pointer;" aria-label="あなたの番です 未来を変える">
+          <img src="images/index-stor2y.png" alt="あなたの番です。次にストーリーを書くのはあなたかもしれない。" style="width: 100%; height: auto; display: block; box-shadow: 0 10px 30px rgba(215, 201, 182, 0.3); transition: transform 0.2s ease;">
+        </a>
+      </div>
+
     </div>
-    <div class="footer-links">
-      <a href="index.html#about">Gemarisとは</a>
-      <a href="support.html">サポート</a>
-      <a href="plan.html">契約プラン</a>
-      <a href="faq.html">FAQ</a>
-      <a href="staff.html">スタッフ</a>
-      <a href="recruit.html">募集要項</a>
-      <a href="apply.html">応募</a>
+  </section>
+
+  <section class="section staff-teaser" style="padding: 40px 0; background: transparent; position: relative; overflow: hidden;">
+    <div id="staff-teaser" style="position: absolute; top: -80px; left: 0;"></div>
+    <div class="container wide-bleed-container">
+      <div class="staff-banner-wrap">
+        <img src="images/staff.png" alt="支える人を知ることが、安心につながる。運営スタッフ紹介を見る" class="staff-img-map-target" usemap="#index-staff-map" id="js-index-staff-img" style="width: 100%; height: auto; display: block; border: none;">
+        <map name="index-staff-map">
+          <area shape="rect" coords="110,2170,1015,2330" href="staff.html" alt="スタッフ紹介を見る" class="map-link">
+        </map>
+      </div>
     </div>
-    <p>Gemaris合同会社</p>
-    <p>〒790-0942 愛媛県松山市古川北3-9-8</p>
-    <p class="copyright">© 2026 Gemaris LLC. All Rights Reserved.</p>
-  </div>
-</footer>
+  </section>
 
-<script>
-  const hamburger = document.getElementById('js-hamburger');
-  const navMenu = document.getElementById('js-nav-menu');
+  <section class="section index-combined-apply-section" id="cta-links" style="padding: 40px 0; background: transparent; position: relative; overflow: hidden;">
+    <div class="container wide-bleed-container">
+      <div class="apply-banner-wrap">
+        <img src="images/index-apply.png" alt="まずはDiscordへ / あなたの挑戦を待っています" style="width: 100%; height: auto; display: block; border: none;">
+        
+        <a href="https://discord.gg/XXXXXXXX" target="_blank" class="apply-invisible-link link-discord" style="position: absolute; display: block; width: 76%; height: 5.6%; left: 12%; top: 27.7%; background: transparent; z-index: 100 !important; cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0);" aria-label="Discordで相談する"></a>
+        
+        <a href="apply.html?job=driver" class="apply-invisible-link link-driver" style="position: absolute; display: block; width: 76%; height: 5.6%; left: 12%; top: 66.4%; background: transparent; z-index: 100 !important; cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0);" aria-label="ライバー応募"></a>
+        
+        <a href="apply.html?job=manager" class="apply-invisible-link link-manager" style="position: absolute; display: block; width: 76%; height: 5.6%; left: 12%; top: 74.5%; background: transparent; z-index: 100 !important; cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0);" aria-label="マネージャー応募"></a>
+        
+        <a href="apply.html?job=scout" class="apply-invisible-link link-scout" style="position: absolute; display: block; width: 76%; height: 5.6%; left: 12%; top: 82.6%; background: transparent; z-index: 100 !important; cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0);" aria-label="スカウト応募"></a>
+      </div>
+    </div>
+  </section>
 
-  // タップでメニューとボタン両方の状態を反転
-  hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('is-active');
-      navMenu.classList.toggle('is-active');
-  });
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="images/image(24).png" alt="Gemaris">
+      </div>
+      <div class="footer-links">
+        <a href="index.html">TOP</a>
+        <a href="support.html">サポート</a>
+        <a href="plan.html">契約プラン</a>
+        <a href="recruit.html">募集要項</a>
+        <a href="staff.html">スタッフ紹介</a>
+        <a href="apply.html">応募</a>
+      </div>
+      <div class="footer-sub-links" style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+        <a href="company.html" style="font-size: 0.75rem; color: #888888; text-decoration: none; margin: 0 10px;">会社概要</a>
+        <a href="privacy.html" style="font-size: 0.75rem; color: #888888; text-decoration: none; margin: 0 10px;">プライバシーポリシー</a>
+      </div>
+      <p class="copyright">© 2026 Gemaris LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-  // ページ遷移して戻ってきた時のリセット処理
-  window.addEventListener('pageshow', () => {
-      if (navMenu) navMenu.classList.remove('is-active');
-      if (hamburger) hamburger.classList.remove('is-active');
-  });
+  <script>
+    /* ハンバーガーメニュー */
+    const hamburger = document.getElementById('js-hamburger');
+    const navMenu = document.getElementById('js-nav-menu');
 
-  // リンクを踏んだら自動で閉じる
-  const navLinks = navMenu.querySelectorAll('a');
-  navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-          navMenu.classList.remove('is-active');
-          hamburger.classList.remove('is-active');
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
       });
-  });
-</script>
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('is-active');
+          navMenu.classList.remove('is-active');
+        });
+      });
+    }
+
+    /* recruit.png リサイズ */
+    const indexImg = document.getElementById('js-index-recruit-img');
+    const indexArea = document.querySelector('map[name="index-recruit-map"] area');
+    const idxOriginalWidth = 1125;
+    const idxOriginalHeight = 2436;
+    const idxOriginalCoords = [145, 2170, 980, 2330];
+
+    function resizeIndexMap() {
+      if (!indexImg || !indexArea) return;
+      const rect = indexImg.getBoundingClientRect();
+      const ratioX = rect.width / idxOriginalWidth;
+      const ratioY = rect.height / idxOriginalHeight;
+      const newCoords = [
+        Math.round(idxOriginalCoords[0] * ratioX),
+        Math.round(idxOriginalCoords[1] * ratioY),
+        Math.round(idxOriginalCoords[2] * ratioX),
+        Math.round(idxOriginalCoords[3] * ratioY)
+      ];
+      indexArea.setAttribute('coords', newCoords.join(','));
+    }
+
+    /* support + plan リサイズ */
+    const combImg = document.getElementById('js-index-comb-img');
+    const combAreas = document.querySelectorAll('map[name="index-comb-map"] area');
+    const combOriginalWidth = 1125;
+    const combOriginalHeight = 2436;
+    const combOriginalCoords = [
+      [90, 1240, 1035, 1360],
+      [90, 2280, 1035, 2400]
+    ];
+
+    function resizeCombMap() {
+      if (!combImg || combAreas.length === 0) return;
+      const rect = combImg.getBoundingClientRect();
+      const ratioX = rect.width / combOriginalWidth;
+      const ratioY = rect.height / combOriginalHeight;
+      combAreas.forEach((area, index) => {
+        const base = combOriginalCoords[index];
+        if (!base) return;
+        const newCoords = [
+          Math.round(base[0] * ratioX),
+          Math.round(base[1] * ratioY),
+          Math.round(base[2] * ratioX),
+          Math.round(base[3] * ratioY)
+        ];
+        area.setAttribute('coords', newCoords.join(','));
+      });
+    }
+
+    /* staff.png 用リサイズ */
+    const staffImg = document.getElementById('js-index-staff-img');
+    const staffArea = document.querySelector('map[name="index-staff-map"] area');
+    const stfOriginalWidth = 1125;
+    const stfOriginalHeight = 2436;
+    const stfOriginalCoords = [110, 2040, 1015, 2240];
+
+    function resizeStaffMap() {
+      if (!staffImg || !staffArea) return;
+      const rect = staffImg.getBoundingClientRect();
+      const ratioX = rect.width / stfOriginalWidth;
+      const ratioY = rect.height / stfOriginalHeight;
+      const newCoords = [
+        Math.round(stfOriginalCoords[0] * ratioX),
+        Math.round(stfOriginalCoords[1] * ratioY),
+        Math.round(stfOriginalCoords[2] * ratioX),
+        Math.round(stfOriginalCoords[3] * ratioY)
+      ];
+      staffArea.setAttribute('coords', newCoords.join(','));
+    }
+
+    function updateAllMaps() {
+      resizeIndexMap();
+      resizeCombMap();
+      resizeStaffMap();
+    }
+
+    window.addEventListener('load', updateAllMaps);
+    window.addEventListener('resize', updateAllMaps);
+
+    if (indexImg) { indexImg.complete ? resizeIndexMap() : indexImg.addEventListener('load', resizeIndexMap); }
+    if (combImg) { combImg.complete ? resizeCombMap() : combImg.addEventListener('load', resizeCombMap); }
+    if (staffImg) { staffImg.complete ? resizeStaffMap() : staffImg.addEventListener('load', resizeStaffMap); }
+  </script>
 </body>
 </html>
